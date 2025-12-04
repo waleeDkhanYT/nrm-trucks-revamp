@@ -4,15 +4,16 @@ import heroImage from "@/assets/hero-truck-1.jpg";
 interface PageHeaderProps {
   title: string;
   description: string;
+  heroImg?: string;
 }
 
-const PageHeader = ({ title, description }: PageHeaderProps) => {
+const PageHeader = ({ title, description, heroImg }: PageHeaderProps) => {
   return (
     <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
+          src={heroImg ? heroImg : heroImage}
           alt="Background"
           className="w-full h-full object-cover"
         />

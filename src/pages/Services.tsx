@@ -1,57 +1,18 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Truck, Forklift, MapPin, Wrench, Package, Shield, Clock, CheckCircle } from "lucide-react";
-import Layout from "@/components/layout/Layout";
-import PageHeader from "@/components/layout/PageHeader";
 import { Link } from "react-router-dom";
+import { ArrowRightIcon } from 'lucide-react';
+
+import { nrmServices, whyChooseUs } from "@/lib/data/service";
+import PageHeader from "@/components/layout/PageHeader";
+import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 
-const services = [
-  {
-    icon: Truck,
-    title: "Logistics Services",
-    description: "Comprehensive logistics solutions for all your transportation needs. We handle everything from planning to delivery.",
-    features: ["Door-to-door delivery", "Real-time tracking", "Customs clearance support", "Warehousing solutions"],
-  },
-  {
-    icon: Forklift,
-    title: "Equipment Rental",
-    description: "Access our extensive fleet of construction equipment for short-term or long-term projects.",
-    features: ["Excavators & loaders", "Cranes & forklifts", "Compactors & generators", "Flexible rental terms"],
-  },
-  {
-    icon: MapPin,
-    title: "Land Transport",
-    description: "Reliable land transportation services across the UAE and GCC region with our modern fleet.",
-    features: ["Tipper trucks", "Trailer trucks", "Low bed trailers", "Tanker services"],
-  },
-  {
-    icon: Wrench,
-    title: "Maintenance Support",
-    description: "Keep your equipment running with our professional maintenance and repair services.",
-    features: ["Preventive maintenance", "Emergency repairs", "Spare parts supply", "Technical consultancy"],
-  },
-  {
-    icon: Package,
-    title: "Project Cargo",
-    description: "Specialized handling of oversized and heavy cargo for industrial and construction projects.",
-    features: ["Heavy lift operations", "Route planning", "Permit management", "Escort services"],
-  },
-  {
-    icon: Shield,
-    title: "Safety Solutions",
-    description: "Comprehensive safety programs and equipment to protect your workforce and assets.",
-    features: ["Safety audits", "Training programs", "PPE supply", "Incident management"],
-  },
-];
-
-const whyChooseUs = [
-  { icon: Clock, text: "24/7 Service Availability" },
-  { icon: Shield, text: "Fully Insured Operations" },
-  { icon: CheckCircle, text: "ISO Certified Processes" },
-  { icon: Truck, text: "Modern Fleet" },
-];
-
 const Services = () => {
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, []);
+
   return (
     <Layout>
       <PageHeader
@@ -76,8 +37,8 @@ const Services = () => {
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+          <div className="flex gap-8">
+            {nrmServices.map((service, index) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -85,21 +46,19 @@ const Services = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="bg-card rounded-xl p-6 shadow-soft border border-border hover:shadow-glow hover:border-primary/20 transition-all duration-300"
+                className="grid grid-cols-1 md:grid-cols-2 bg-card rounded-xl shadow-soft border border-border transition-all duration-300"
               >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <service.icon className="w-7 h-7 text-primary" />
+                <img src={service.img} alt={service.title} className="object-cover rounded-xl" />
+                <div className="p-4 my-auto">
+                  <h3 className="text-xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground text-md mb-6">{service.content}</p>
+                  <Link
+                    state={service}
+                    className="flex w-fit gap-2 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg px-6 py-4"
+                    to={service.readmore}>Read More <ArrowRightIcon
+                      className="hover:transition-all" />
+                  </Link>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">{service.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <CheckCircle className="w-4 h-4 text-primary shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
               </motion.div>
             ))}
           </div>

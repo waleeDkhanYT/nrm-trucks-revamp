@@ -33,11 +33,10 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-4 left-[8%] w-10/12 rounded-lg right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-soft"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
@@ -62,11 +61,10 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === link.path
+                className={`relative text-sm font-medium transition-colors hover:text-primary ${location.pathname === link.path
                     ? "text-primary"
-                    : "text-foreground"
-                }`}
+                    : `${isScrolled ? "text-foreground" : "text-white"}`
+                  }`}
               >
                 {link.name}
                 {location.pathname === link.path && (
@@ -121,11 +119,10 @@ const Navbar = () => {
                 >
                   <Link
                     to={link.path}
-                    className={`block py-2 font-medium ${
-                      location.pathname === link.path
+                    className={`block py-2 font-medium ${location.pathname === link.path
                         ? "text-primary"
                         : "text-foreground"
-                    }`}
+                      }`}
                   >
                     {link.name}
                   </Link>

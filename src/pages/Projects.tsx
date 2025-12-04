@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Calendar, CheckCircle } from "lucide-react";
+
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/layout/PageHeader";
 import heroTruck1 from "@/assets/hero-truck-1.jpg";
@@ -58,6 +60,10 @@ const projects = [
 ];
 
 const Projects = () => {
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, []);
+
   return (
     <Layout>
       <PageHeader
@@ -101,11 +107,10 @@ const Projects = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-accent/80 to-transparent" />
                   <span
-                    className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium ${
-                      project.status === "Completed"
+                    className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-medium ${project.status === "Completed"
                         ? "bg-green-500/20 text-green-400"
                         : "bg-primary/20 text-primary"
-                    }`}
+                      }`}
                   >
                     {project.status}
                   </span>

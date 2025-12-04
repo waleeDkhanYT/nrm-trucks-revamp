@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Target, Eye, Heart, Users, Award, Clock } from "lucide-react";
+
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/layout/PageHeader";
 import heroTruck2 from "@/assets/hero-truck-2.jpg";
@@ -29,6 +31,10 @@ const features = [
 ];
 
 const About = () => {
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, []);
+
   return (
     <Layout>
       <PageHeader

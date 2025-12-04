@@ -1,70 +1,78 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 
 const promises = [
   "Satisfaction",
-  "On time delivery",
-  "24X7 Service",
-  "Immediate availability",
+  "On-time Delivery",
+  "24/7 Delivery Support",
+  "Immediate Availability",
 ];
 
 const PromiseSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-accent" />
-      
-      {/* Decorative Pattern */}
-      <div className="absolute left-0 top-0 bottom-0 w-32 opacity-20">
-        <div className="grid grid-cols-4 gap-2 p-4">
-          {Array.from({ length: 48 }).map((_, i) => (
-            <div key={i} className="w-2 h-2 rounded-full bg-primary" />
-          ))}
-        </div>
+    <section className="relative py-28 overflow-hidden bg-gradient-to-b from-accent/40 via-accent/60 to-accent/90">
+      {/* Ambient lights */}
+      <div className="absolute top-10 left-20 w-72 h-72 bg-primary/30 blur-[120px] rounded-full opacity-30"></div>
+      <div className="absolute bottom-10 right-20 w-64 h-64 bg-primary/20 blur-[100px] rounded-full opacity-30"></div>
+
+      {/* Diagonal accent shape */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute right-0 top-0 w-[50%] h-full bg-gradient-to-br from-primary/10 to-transparent transform rotate-12"></div>
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="text-center max-w-3xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-primary text-xl md:text-2xl font-semibold mb-6"
-          >
-            We promise you ...
-          </motion.h2>
+        {/* Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center text-primary text-2xl md:text-3xl font-semibold tracking-wide mb-8"
+        >
+          We Promise You
+        </motion.h2>
 
-          <div className="space-y-2">
-            {promises.map((promise, index) => (
-              <motion.p
-                key={promise}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-2xl md:text-3xl lg:text-4xl font-bold text-accent-foreground"
-              >
-                ...{promise}
-              </motion.p>
-            ))}
-          </div>
+        {/* Promise cards */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          {promises.map((promise, i) => (
+            <motion.div
+              key={promise}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 text-center shadow-[0_8px_30px_rgb(0,0,0,0.1)] hover:shadow-[0_8px_40px_rgb(0,0,0,0.2)] transition-all duration-300"
+            >
+              {/* animated border glow */}
+              <div className="absolute inset-0 rounded-2xl border border-primary/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-12"
-          >
-            <button className="group w-20 h-20 rounded-full bg-background/10 backdrop-blur-sm border border-accent-foreground/20 flex items-center justify-center mx-auto hover:bg-primary hover:border-primary transition-all duration-300">
-              <Play className="w-8 h-8 text-accent-foreground group-hover:text-primary-foreground fill-current ml-1" />
-            </button>
-            <p className="text-accent-foreground/60 mt-4 text-sm uppercase tracking-wider">
-              How It Works
-            </p>
-          </motion.div>
+              <p className="text-2xl md:text-3xl font-bold text-white drop-shadow-sm">
+                {promise}
+              </p>
+            </motion.div>
+          ))}
         </div>
+
+        {/* Play button section */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-14 text-center"
+        >
+          <button className="group w-24 h-24 relative flex items-center justify-center mx-auto">
+            <div className="absolute inset-0 rounded-full bg-white/10 backdrop-blur-md border border-white/20 transition-all duration-300 group-hover:bg-primary group-hover:border-primary shadow-lg"></div>
+
+            <Play className="w-9 h-9 text-white/90 group-hover:text-primary-foreground z-10 ml-1 transition-all" />
+          </button>
+
+          <p className="mt-5 text-white/70 tracking-widest text-sm uppercase">
+            How It Works
+          </p>
+        </motion.div>
       </div>
     </section>
   );

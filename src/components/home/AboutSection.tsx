@@ -13,12 +13,12 @@ const features = [
   {
     icon: Eye,
     title: "Our Vision",
-    description: "To understand the challenges of our clients and provide customized solutions with very reliable & well-maintained equipment.",
+    description: "To understand the challenges of the clients and provide customized solutions with very reliable & well maintained equipment, with the highest standards of safety and service quality which will add value to the client.",
   },
   {
     icon: Heart,
     title: "Our Commitment",
-    description: "Our equipment is maintained with the highest standards, in our state-of-the-art workshops to give the best service, quality & 24/7 support.",
+    description: "Our equipment is maintained with the highest standards, in our state-of-the-art workshops to provide the right equipment for the right job. Strive to give the best service quality & Provide support round the clock. Training and Development of our employees to ensure a professional, ethical, and competent workforce."
   },
 ];
 
@@ -39,13 +39,13 @@ const AboutSection = () => {
               <img
                 src={heroTruck2}
                 alt="NRM Trucks Fleet"
-                className="w-full h-[400px] md:h-[500px] object-cover"
+                className="w-full h-[580px] xsm:h-[480px] sm:h-[400px] md:h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-accent/60 to-transparent" />
             </div>
 
             {/* Feature Cards */}
-            <div className="absolute -right-4 md:right-0 top-8 md:top-12 space-y-4 w-[280px]">
+            <div className="absolute right-0 lg:-right-8 -top-12 space-y-4 w-full lg:w-7/12">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
