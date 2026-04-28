@@ -56,7 +56,7 @@ const PromiseSection = () => {
         </div>
 
         {/* Play button section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -72,7 +72,7 @@ const PromiseSection = () => {
           <p className="mt-5 text-white/70 tracking-widest text-sm uppercase">
             How It Works
           </p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
