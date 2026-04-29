@@ -38,7 +38,6 @@ const Fleet = () => {
 
       <section className="section-padding bg-background">
         <div className="container-custom">
-          {/* Header Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +57,6 @@ const Fleet = () => {
             </p>
           </motion.div>
 
-          {/* Image Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {fleetItems.map((item, index) => (
               <motion.div
@@ -70,7 +68,6 @@ const Fleet = () => {
                 className="group relative"
               >
                 <div className="relative overflow-hidden rounded-2xl aspect-[4/3] shadow-soft border border-border bg-card transition-all duration-500 hover:shadow-glow hover:-translate-y-2">
-                  {/* Image */}
                   <img
                     src={item.img}
                     alt={item.title}
