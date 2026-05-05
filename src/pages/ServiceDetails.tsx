@@ -33,8 +33,8 @@ const ServiceDetails = () => {
                             <div className='p-4'>
                                 <h1 className='text-3xl md:text-4xl font-bold mb-2'>{data?.title}</h1>
                                 {
-                                    data?.description?.map((desc)=>(
-                                        <p key={desc.id} className='mb-4'>{desc}</p>
+                                    data?.description?.map((desc: string, index: number)=>(
+                                        <p key={index} className='mb-4'>{desc}</p>
                                     ))
                                 }
                             </div>

@@ -66,10 +66,9 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
               {[
-                "Logistics Services",
-                "Equipment Rental",
-                "Land Transport",
-                "Construction Support",
+                "Container Truck Service",
+                "Flatbed Truck Service",
+                "Tipper Trailer Service",
               ].map((service) => (
                 <li key={service}>
                   <span className="text-accent-foreground/80 text-sm">
@@ -92,7 +91,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-accent-foreground/80 text-sm">
-                  Industrial Area, Dubai, UAE
+                  Karama-Dubai
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -101,7 +100,7 @@ const Footer = () => {
                   href="tel:+97143474781"
                   className="text-accent-foreground/80 hover:text-primary transition-colors text-sm"
                 >
-                  +971 43 474 781
+                  +971 55 692 6211
                 </a>
               </li>
               <li className="flex items-center gap-3">
