@@ -66,7 +66,7 @@ const About = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Leading Transport Solutions Since 1979
+                Leading Transport Solutions Since 2015
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 NRM Trucks has been a cornerstone of the Middle East's transport and logistics industry for over four decades. Starting as a small operation with just a few vehicles, we have grown into one of the region's most trusted names in heavy transport.

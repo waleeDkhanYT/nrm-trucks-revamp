@@ -21,7 +21,7 @@ const Footer = () => {
               <div className="flex items-center justify-center gap-[5px]">
                 {/* <Truck className="w-6 h-6 text-primary-foreground" /> */}
                 <img src={NRM} alt="Logo" className="w-[80px] mb-[1px]" />
-                 <span className="text-white text-[24px] font-bold text-foreground">Trucks</span>
+                 <span className="text-white text-[31px] font-bold text-foreground">Trucks</span>
               </div>
             
           </Link>
