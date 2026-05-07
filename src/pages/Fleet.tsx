@@ -4,24 +4,24 @@ import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/layout/PageHeader";
 
 // Import images
-import fleet1 from "@/assets/fleet-1.png";
-import fleet2 from "@/assets/fleet-2.png";
-import fleet3 from "@/assets/fleet-3.png";
-import fleet4 from "@/assets/fleet-4.png";
+import fleet1 from "@/assets/service-1.webp";
+import fleet2 from "@/assets/service-2.webp";
+import fleet3 from "@/assets/service-3.webp";
+// import fleet4 from "@/assets/fleet-4.png";
 
 const fleetItems = [
-  { id: 1, img: fleet1, title: "Heavy Duty Tipper", category: "Transport" },
-  { id: 2, img: fleet2, title: "Logistics Trailer", category: "Logistics" },
-  { id: 3, img: fleet3, title: "Industrial Excavator", category: "Machinery" },
-  { id: 4, img: fleet4, title: "Flatbed Carrier", category: "Transport" },
-  { id: 5, img: fleet1, title: "Tipping Trailer", category: "Transport" },
-  { id: 6, img: fleet2, title: "Freight Trailer", category: "Logistics" },
-  { id: 7, img: fleet3, title: "Backhoe Loader", category: "Machinery" },
-  { id: 8, img: fleet4, title: "Cargo Flatbed", category: "Transport" },
-  { id: 9, img: fleet1, title: "Construction Tipper", category: "Transport" },
-  { id: 10, img: fleet2, title: "Long-haul Trailer", category: "Logistics" },
-  { id: 11, img: fleet3, title: "Power Shovel", category: "Machinery" },
-  { id: 12, img: fleet4, title: "Utility Flatbed", category: "Transport" },
+  { id: 1, img: fleet1, title: "Container Truck Servcies", category: "Transport" },
+  { id: 3, img: fleet3, title: "Tipper Trailer Services", category: "Transport" },
+  { id: 2, img: fleet2, title: "Flatbed Truck Service", category: "Logistics" },
+  // { id: 4, img: fleet4, title: "Flatbed Carrier", category: "Transport" },
+  // { id: 5, img: fleet1, title: "Tipping Trailer", category: "Transport" },
+  // { id: 6, img: fleet2, title: "Freight Trailer", category: "Logistics" },
+  // { id: 7, img: fleet3, title: "Backhoe Loader", category: "Machinery" },
+  // { id: 8, img: fleet4, title: "Cargo Flatbed", category: "Transport" },
+  // { id: 9, img: fleet1, title: "Construction Tipper", category: "Transport" },
+  // { id: 10, img: fleet2, title: "Long-haul Trailer", category: "Logistics" },
+  // { id: 11, img: fleet3, title: "Power Shovel", category: "Machinery" },
+  // { id: 12, img: fleet4, title: "Utility Flatbed", category: "Transport" },
 ];
 
 const Fleet = () => {
@@ -59,7 +59,7 @@ const Fleet = () => {
           </motion.div>
 
           {/* Image Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
             {fleetItems.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -74,7 +74,7 @@ const Fleet = () => {
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
                   />
                   
                   {/* Overlay */}

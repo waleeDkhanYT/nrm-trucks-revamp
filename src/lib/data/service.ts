@@ -20,18 +20,19 @@ export const nrmServices = [
     //     img: Shovel950E,
     //     readmore: "/services/shovel950E"
     // },
-    {
-        id: "container-truck",
-        title: "Container Truck Service",
-        content: "Our Container Truck Services provide secure and efficient transportation for standard and specialized shipping containers across the region. We ensure timely delivery from ports to your project sites.",
+        {
+        id: "tipper-trailer",
+        title: "Tipper Trailer Services",
+        content: "Our Tipper Trailer Services are designed for the efficient bulk transport of loose materials such as sand, gravel, aggregate, and construction debris. Essential for construction logistics.",
         description: [
-            "Our Container Truck Services provide secure and efficient transportation for standard and specialized shipping containers across the region. We ensure timely delivery of your cargo from ports to warehouses or directly to your project sites.",
-            "Equipped with a modern fleet of well-maintained container chassis and prime movers, we can handle various container sizes including 20ft, 40ft, and high-cube containers. Our drivers are highly trained in safe container handling and securement protocols.",
-            "We offer advanced tracking and logistics support, allowing you to monitor your shipments in real-time. Whether it's port drayage, long-haul transport, or dedicated contract carriage, our container services are designed to optimize your supply chain."
+            "Our Tipper Trailer Services are designed for the efficient bulk transport of loose materials such as sand, gravel, aggregate, and construction debris. They are an essential component of earthmoving and construction logistics.",
+            "Constructed with heavy-duty materials, our tipper trailers are built to withstand the rigors of heavy loading and off-road site conditions. The hydraulic tipping mechanism ensures rapid and safe unloading of materials exactly where they are needed.",
+            "We support a wide range of industries including construction, mining, and agriculture. Our commitment to vehicle maintenance and driver safety ensures that your bulk materials are transported with the highest level of reliability and operational efficiency."
         ],
-        img: service1,
-        readmore: "/services/container-truck"
+        img: service3,
+        readmore: "/services/tipper-trailer"
     },
+    
     {
         id: "flatbed-truck",
         title: "Flatbed Truck Service",
@@ -45,16 +46,16 @@ export const nrmServices = [
         readmore: "/services/flatbed-truck"
     },
     {
-        id: "tipper-trailer",
-        title: "Tipper Trailer Services",
-        content: "Our Tipper Trailer Services are designed for the efficient bulk transport of loose materials such as sand, gravel, aggregate, and construction debris. Essential for construction logistics.",
+        id: "container-truck",
+        title: "Container Truck Service",
+        content: "Our Container Truck Services provide secure and efficient transportation for standard and specialized shipping containers across the region. We ensure timely delivery from ports to your project sites.",
         description: [
-            "Our Tipper Trailer Services are designed for the efficient bulk transport of loose materials such as sand, gravel, aggregate, and construction debris. They are an essential component of earthmoving and construction logistics.",
-            "Constructed with heavy-duty materials, our tipper trailers are built to withstand the rigors of heavy loading and off-road site conditions. The hydraulic tipping mechanism ensures rapid and safe unloading of materials exactly where they are needed.",
-            "We support a wide range of industries including construction, mining, and agriculture. Our commitment to vehicle maintenance and driver safety ensures that your bulk materials are transported with the highest level of reliability and operational efficiency."
+            "Our Container Truck Services provide secure and efficient transportation for standard and specialized shipping containers across the region. We ensure timely delivery of your cargo from ports to warehouses or directly to your project sites.",
+            "Equipped with a modern fleet of well-maintained container chassis and prime movers, we can handle various container sizes including 20ft, 40ft, and high-cube containers. Our drivers are highly trained in safe container handling and securement protocols.",
+            "We offer advanced tracking and logistics support, allowing you to monitor your shipments in real-time. Whether it's port drayage, long-haul transport, or dedicated contract carriage, our container services are designed to optimize your supply chain."
         ],
-        img: service3,
-        readmore: "/services/tipper-trailer"
+        img: service1,
+        readmore: "/services/container-truck"
     }
 ];
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Truck, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-
+import NRM from "@/assets/Logo.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -16,15 +16,16 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <Truck className="w-6 h-6 text-primary-foreground" />
+            <Link to="/" className="flex items-center">
+            
+              <div className="flex items-center justify-center gap-[5px]">
+                {/* <Truck className="w-6 h-6 text-primary-foreground" /> */}
+                <img src={NRM} alt="Logo" className="w-[80px] mb-[1px]" />
+                 <span className="text-white text-[24px] font-bold text-foreground">Trucks</span>
               </div>
-              <span className="text-xl font-bold">
-                NRM <span className="text-primary">Trucks</span>
-              </span>
-            </Link>
-            <p className="text-accent-foreground/80 text-sm leading-relaxed">
+            
+          </Link>
+            <p className="text-accent-foreground/80 text-sm leading-relaxed mt-3">
               Leading provider of heavy transport and logistics solutions. Delivering excellence in construction equipment rental and transport services.
             </p>
           </motion.div>
@@ -66,9 +67,9 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
               {[
-                "Container Truck Service",
-                "Flatbed Truck Service",
                 "Tipper Trailer Service",
+                "Flatbed Truck Service",
+                "Container Truck Service",
               ].map((service) => (
                 <li key={service}>
                   <span className="text-accent-foreground/80 text-sm">

@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import NRM from "@/assets/Logo.png";
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
@@ -40,19 +40,18 @@ const Navbar = () => {
         }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-[70px]">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-2"
+              className=""
             >
-              <div className="w-10 h-10 bg-gradient-cta rounded-lg flex items-center justify-center">
-                <Truck className="w-6 h-6 text-primary-foreground" />
+              <div className="flex items-center justify-center gap-[5px]">
+                {/* <Truck className="w-6 h-6 text-primary-foreground" /> */}
+                <img src={NRM} alt="Logo" className="w-[80px] mb-[1px]" />
+                 <span className="text-black text-[24px] font-bold text-foreground">Trucks</span>
               </div>
-              <span className="text-xl font-bold text-foreground">
-                NRM <span className="text-primary">Trucks</span>
-              </span>
             </motion.div>
           </Link>
 
