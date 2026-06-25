@@ -37,7 +37,7 @@ const Services = () => {
             </h2>
           </motion.div>
 
-          <div className="flex gap-8">
+          <div className="flex flex-col gap-8">
             {nrmServices.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -46,10 +46,12 @@ const Services = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="grid grid-cols-1 md:grid-cols-2 bg-card rounded-xl shadow-soft border border-border transition-all duration-300"
+                className="grid grid-cols-1 md:grid-cols-2 bg-card rounded-xl shadow-soft border border-border transition-all duration-300 overflow-hidden"
               >
-                <img src={service.img} alt={service.title} className="object-cover rounded-xl" />
-                <div className="p-4 my-auto">
+                <div className="w-full h-[250px] sm:h-[300px] md:h-[320px] lg:h-[360px]">
+                  <img src={service.img} alt={service.title} className="w-full h-full object-cover" />
+                </div>
+                <div className="p-4 my-auto md:p-8">
                   <h3 className="text-xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">{service.title}</h3>
                   <p className="text-muted-foreground text-md mb-6">{service.content}</p>
                   <Link

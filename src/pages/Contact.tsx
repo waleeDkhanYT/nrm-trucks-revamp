@@ -13,7 +13,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    details: ["+971 43 474 781", "+971 50 123 4567"],
+    details: ["+971 55 692 6211"],
   },
   {
     icon: Mail,
@@ -23,7 +23,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Us",
-    details: ["Al Quoz Industrial Area", "Dubai, UAE"],
+    details: ["Karama - Dubai - UAE"],
   },
   {
     icon: Clock,
@@ -156,7 +156,7 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+971 50 123 4567"
+                        placeholder="+971 55 692 6211"
                         className="h-12"
                       />
                     </div>

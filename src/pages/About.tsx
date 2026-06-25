@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Target, Eye, Heart, Users, Award, Clock } from "lucide-react";
+import { Target, Eye, Heart, Users, Award, Clock,Truck, Star} from "lucide-react";
 
 import Layout from "@/components/layout/Layout";
 import PageHeader from "@/components/layout/PageHeader";
@@ -25,9 +25,9 @@ const values = [
 ];
 
 const features = [
-  { icon: Users, value: "450+", label: "Team Members" },
-  { icon: Award, value: "45+", label: "Years Experience" },
-  { icon: Clock, value: "24/7", label: "Support Available" },
+  { icon: Star, value: "10+", label: "Years of Experience" },
+  { icon: Truck, value: "60+", label: "Total Fleet Capacity" },
+  { icon: Clock, value: "24/7", label: "Operational Support" },
 ];
 
 const About = () => {
@@ -66,7 +66,7 @@ const About = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Leading Transport Solutions Since 1979
+                Leading Transport Solutions Since 2015
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 NRM Trucks has been a cornerstone of the Middle East's transport and logistics industry for over four decades. Starting as a small operation with just a few vehicles, we have grown into one of the region's most trusted names in heavy transport.

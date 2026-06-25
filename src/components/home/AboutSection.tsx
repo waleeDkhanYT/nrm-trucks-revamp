@@ -8,17 +8,17 @@ const features = [
   {
     icon: MapPin,
     title: "Our Operating Locations",
-    description: "Head Office: Dubai. Branch Offices: Abu Dhabi, Fujairah. Workshop facilities: Dubai, Fujairah, Sohar.",
+    description: "Head Office: Karama-Dubai",
   },
   {
     icon: Eye,
     title: "Our Vision",
-    description: "To understand the challenges of the clients and provide customized solutions with very reliable & well maintained equipment, with the highest standards of safety and service quality which will add value to the client.",
+    description: "To be the UAE’s most versatile transport partner—starting with our deep roots in moving the materials that power our infrastructure, and growing to handle the full range of transport needs, from heavy specialized loads to international shipping containers.",
   },
   {
     icon: Heart,
     title: "Our Commitment",
-    description: "Our equipment is maintained with the highest standards, in our state-of-the-art workshops to provide the right equipment for the right job. Strive to give the best service quality & Provide support round the clock. Training and Development of our employees to ensure a professional, ethical, and competent workforce."
+    description: "Straightforward pricing, safe driving, and clear communication. We take the stress out of logistics so you can focus on your business."
   },
 ];
 
@@ -87,13 +87,12 @@ const AboutSection = () => {
               NRM Transport Group
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              NRM Trucks is one of the leading service providers catering to various industries like Construction, Oil & Gas, EPC, Government projects and many more in the Middle East.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            Equipped with a specialized fleet of truck & trailers, we provide the heavy-duty capacity as per your projects demand. Our operations are driven by a team with over 10 years of hands-on expertise in construction and container logistics, ensuring every load is managed with veteran precision.            </p>
+            {/* <p className="text-muted-foreground leading-relaxed mb-6">
               Our journey started in 1999, and we have grown with our clients over these 45+ years by adding value to their business. Since establishment, we have been diversifying business operations and product portfolios to adapt to the ever-changing market needs.
-            </p>
+            </p> */}
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Today, with over 450+ people in the company, our focus is even more on Safety & Service Quality. We have established three fully functional workshops and deployed over 1500+ assets across the region.
+            We don't just move cargo/materials,  we secure your timeline by combining strict safety standards with a focus on rapid turnaround times, we serve as the most reliable link in your supply chain
             </p>
             <Link to="/about">
               <Button variant="hero" size="lg">
